@@ -1,10 +1,11 @@
 ---
 swagger: "2.0"
 x-collection-name: Azure Storage
-x-complete: 1
+x-complete: 0
 info:
-  title: StorSimpleSeries8000ManagementClient
+  title: Azure Storage API Devices Deactivate
   version: 1.0.0
+  description: Deactivates the device.
 host: management.azure.com
 basePath: /
 schemes:
@@ -675,157 +676,17 @@ paths:
           description: OK
       tags:
       - Devices
-  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/devices/{deviceName}/publicEncryptionKey
-  : post:
-      summary: Managers Get Device Public Encryption Key
-      description: Returns the public encryption key of the device.
-      operationId: Managers_GetDevicePublicEncryptionKey
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-storsimplemanagersmanagernamedevicesdevicenamepublicencryptionkey-post
-      parameters:
-      - in: path
-        name: deviceName
-        description: The device name
-      - in: query
-        name: No Name
-      responses:
-        200:
-          description: OK
-      tags:
-      - Managers
-  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/encryptionSettings/default
-  : get:
-      summary: Managers Get Encryption Settings
-      description: Returns the encryption settings of the manager.
-      operationId: Managers_GetEncryptionSettings
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-storsimplemanagersmanagernameencryptionsettingsdefault-get
-      parameters:
-      - in: query
-        name: No Name
-      responses:
-        200:
-          description: OK
-      tags:
-      - Managers
-  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/extendedInformation/vaultExtendedInfo
-  : get:
-      summary: Managers Get Extended Info
-      description: Returns the extended information of the specified manager name.
-      operationId: Managers_GetExtendedInfo
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-storsimplemanagersmanagernameextendedinformationvaultextendedinfo-get
-      parameters:
-      - in: query
-        name: No Name
-      responses:
-        200:
-          description: OK
-      tags:
-      - Managers
-    put:
-      summary: Managers Create Extended Info
-      description: Creates the extended info of the manager.
-      operationId: Managers_CreateExtendedInfo
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-storsimplemanagersmanagernameextendedinformationvaultextendedinfo-put
-      parameters:
-      - in: query
-        name: No Name
-      - in: body
-        name: parameters
-        description: The manager extended information
-        schema:
-          $ref: '#/definitions/holder'
-      responses:
-        200:
-          description: OK
-      tags:
-      - Managers
-    delete:
-      summary: Managers Delete Extended Info
-      description: Deletes the extended info of the manager.
-      operationId: Managers_DeleteExtendedInfo
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-storsimplemanagersmanagernameextendedinformationvaultextendedinfo-delete
-      parameters:
-      - in: query
-        name: No Name
-      responses:
-        200:
-          description: OK
-      tags:
-      - Managers
-    patch:
-      summary: Managers Update Extended Info
-      description: Updates the extended info of the manager.
-      operationId: Managers_UpdateExtendedInfo
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-storsimplemanagersmanagernameextendedinformationvaultextendedinfo-patch
-      parameters:
-      - in: header
-        name: If-Match
-        description: Pass the ETag of ExtendedInfo fetched from GET call
-      - in: query
-        name: No Name
-      - in: body
-        name: parameters
-        description: The manager extended information
-        schema:
-          $ref: '#/definitions/holder'
-      responses:
-        200:
-          description: OK
-      tags:
-      - Managers
-  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/listActivationKey
-  : post:
-      summary: Managers Get Activation Key
-      description: Returns the activation key of the manager.
-      operationId: Managers_GetActivationKey
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-storsimplemanagersmanagernamelistactivationkey-post
-      parameters:
-      - in: query
-        name: No Name
-      responses:
-        200:
-          description: OK
-      tags:
-      - Managers Activation Key
-  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/listPrivateEncryptionKey
-  : post:
-      summary: Managers Get Private Encryption Key
-      description: Returns the symmetric encrypted private encryption key of the manager.
-      operationId: Managers_GetPrivateEncryptionKey
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-storsimplemanagersmanagernamelistprivateencryptionkey-post
-      parameters:
-      - in: query
-        name: No Name
-      responses:
-        200:
-          description: OK
-      tags:
-      - Managers Private Encryption Key
-  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/listPublicEncryptionKey
-  : post:
-      summary: Managers Get Public Encryption Key
-      description: Returns the symmetric encrypted public encryption key of the manager.
-      operationId: Managers_GetPublicEncryptionKey
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-storsimplemanagersmanagernamelistpublicencryptionkey-post
-      parameters:
-      - in: query
-        name: No Name
-      responses:
-        200:
-          description: OK
-      tags:
-      - Managers Public Encryption Key
-  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/regenerateActivationKey
-  : post:
-      summary: Managers Regenerate Activation Key
-      description: Re-generates and returns the activation key of the manager.
-      operationId: Managers_RegenerateActivationKey
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-storsimplemanagersmanagernameregenerateactivationkey-post
-      parameters:
-      - in: query
-        name: No Name
-      responses:
-        200:
-          description: OK
-      tags:
-      - Managers
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
 ---

@@ -1,10 +1,11 @@
 ---
 swagger: "2.0"
 x-collection-name: Azure Storage
-x-complete: 1
+x-complete: 0
 info:
-  title: StorSimpleSeries8000ManagementClient
+  title: Azure Storage API Managers Create Extended Info
   version: 1.0.0
+  description: Creates the extended info of the manager.
 host: management.azure.com
 basePath: /
 schemes:
@@ -738,94 +739,17 @@ paths:
           description: OK
       tags:
       - Managers
-    delete:
-      summary: Managers Delete Extended Info
-      description: Deletes the extended info of the manager.
-      operationId: Managers_DeleteExtendedInfo
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-storsimplemanagersmanagernameextendedinformationvaultextendedinfo-delete
-      parameters:
-      - in: query
-        name: No Name
-      responses:
-        200:
-          description: OK
-      tags:
-      - Managers
-    patch:
-      summary: Managers Update Extended Info
-      description: Updates the extended info of the manager.
-      operationId: Managers_UpdateExtendedInfo
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-storsimplemanagersmanagernameextendedinformationvaultextendedinfo-patch
-      parameters:
-      - in: header
-        name: If-Match
-        description: Pass the ETag of ExtendedInfo fetched from GET call
-      - in: query
-        name: No Name
-      - in: body
-        name: parameters
-        description: The manager extended information
-        schema:
-          $ref: '#/definitions/holder'
-      responses:
-        200:
-          description: OK
-      tags:
-      - Managers
-  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/listActivationKey
-  : post:
-      summary: Managers Get Activation Key
-      description: Returns the activation key of the manager.
-      operationId: Managers_GetActivationKey
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-storsimplemanagersmanagernamelistactivationkey-post
-      parameters:
-      - in: query
-        name: No Name
-      responses:
-        200:
-          description: OK
-      tags:
-      - Managers Activation Key
-  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/listPrivateEncryptionKey
-  : post:
-      summary: Managers Get Private Encryption Key
-      description: Returns the symmetric encrypted private encryption key of the manager.
-      operationId: Managers_GetPrivateEncryptionKey
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-storsimplemanagersmanagernamelistprivateencryptionkey-post
-      parameters:
-      - in: query
-        name: No Name
-      responses:
-        200:
-          description: OK
-      tags:
-      - Managers Private Encryption Key
-  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/listPublicEncryptionKey
-  : post:
-      summary: Managers Get Public Encryption Key
-      description: Returns the symmetric encrypted public encryption key of the manager.
-      operationId: Managers_GetPublicEncryptionKey
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-storsimplemanagersmanagernamelistpublicencryptionkey-post
-      parameters:
-      - in: query
-        name: No Name
-      responses:
-        200:
-          description: OK
-      tags:
-      - Managers Public Encryption Key
-  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/regenerateActivationKey
-  : post:
-      summary: Managers Regenerate Activation Key
-      description: Re-generates and returns the activation key of the manager.
-      operationId: Managers_RegenerateActivationKey
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-storsimplemanagersmanagernameregenerateactivationkey-post
-      parameters:
-      - in: query
-        name: No Name
-      responses:
-        200:
-          description: OK
-      tags:
-      - Managers
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
 ---
